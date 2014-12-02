@@ -17,16 +17,16 @@ configure_file(
   )
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 #include_directories("${PROJECT_BINARY_DIR}")
-set(SRC_LIST drawpanel.cpp app.cpp lsystem.cpp display.cpp turtle.cpp)
+set(SRC_LIST main.cpp)
 # Define sources and executable
-set(EXECUTABLE_NAME "pcgen")
+set(EXECUTABLE_NAME "example")
 add_executable(${EXECUTABLE_NAME} ${SRC_LIST})
 
 # wxWidgets config this probally doesnt work change to qt framework
-set(wxWidgets_CONFIGURATION mswu)
-find_package(wxWidgets COMPONENTS core base REQUIRED)
-include(${wxWidgets_USE_FILE})
-target_link_libraries(${EXECUTABLE_NAME} ${wxWidgets_LIBRARIES})
+#set(wxWidgets_CONFIGURATION mswu)
+#find_package(wxWidgets COMPONENTS core base REQUIRED)
+#include(${wxWidgets_USE_FILE})
+#target_link_libraries(${EXECUTABLE_NAME} ${wxWidgets_LIBRARIES})
 
 # Unittesting gtest
 # TODO

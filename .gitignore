@@ -1,0 +1,7 @@
+CMakeCache.txt
+CMakeFiles
+CPack*
+*.cmake
+config.h
+Makefile
+example
